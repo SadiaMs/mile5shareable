@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shareable Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1><b>Shareable Resume Builder</b></h1>
+<h2><br>By Sadia<br></h2>
+
+<form id="resume-form"> <!-- Corrected id -->
+    <fieldset>
+        <legend>Personal Information</legend>
+        <label for="username">User Name: </label>
+        <input type="text" id = "username" placeholder = "Enter your username" required>
+        <label for="firstName">First Name:</label>
+
+        <input type="text" id="firstName" name="firstName" placeholder = "Enter your First Name" required> <br>
+        <label for="lastName">Last Name:</label>
+
+        <input type="text" id="lastName" name="lastName" placeholder="Enter your Lastname" required><br>
+        <label for="email">Email:</label>
+          <input type="email" id="email" name="email" placeholder="Enter your Email Address" required><br>
+        <label for="phone">Phone:</label>
+
+        <input type="tel" id="phone" name="phone" placeholder="Enter your Phone NO." required><br>
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address" placeholder="Enter your Address" required><br>
+        <label for="city">City:</label>
+
+        <input type="text" id="city" name="city" placeholder="Enter your city Name" required><br>
+        <label for="country">Country:</label>
+        <input type="text" id="country" name="country" placeholder="Enter your country Name " required><br>
+
+      <!-- Add profile picture input field in your form -->
+<label for="profilePicture">Profile Picture</label>
+<input type="file" id="profilePicture" accept="image/*">
+
+<!-- Add an img tag in the resume display section where the profile picture will be displayed -->
+<img id="profilePicDisplay" src="" alt="Profile Picture" style="display:none; width: 150px; height: 150px; border-radius: 50%; margin-bottom: 20px;">
+
+
+    <fieldset>
+        <legend>Education</legend>
+        <label for="education">Education:</label>
+        <input type="text" id="education" name="education"><br>
+        <label for="degree">Degree:</label>
+        <input type="text" id="degree" name="degree"><br>
+    </fieldset>
+
+    <fieldset>
+        <legend>Work Experience</legend>
+        <label for="companyName">Company Name:</label>
+        <input type="text" id="companyName" name="companyName"><br>
+        <label for="position">Position:</label>
+        <input type="text" id="position" name="position"><br>
+        <label for="description">Description:</label>
+        <textarea id="description" name="description"></textarea><br>
+    </fieldset>
+
+    <fieldset>
+        <legend>Skills</legend>
+        <label for="skills">Skills:</label>
+        <input type="text" id="skills" name="skills"><br>
+        <textarea id="skills" name="skills"></textarea>
+
+        <label for="aboutyourself">About yourself:</label>
+        <textarea id="aboutyourself" name="aboutyourself"></textarea><br>
+    </fieldset>
+
+    <button type="submit">Generate Resume</button>
+</form>
+
+<br>
+<!-- Dynamic and Editable Resume -->
+<div id="resumeDisplay" contenteditable="true">
+    <!-- Resume will be generated here -->
+</div>
+<!--section for shareable link and download option-->
+
+<div id="shareable-link-container" style="display:list-item;">
+<h2>Shareable Link</h2>
+<p>Here is your unique link to view or edit your Resume : </p>
+<a href="#" id="shareable-link" target="_blank"></a>
+<br>
+<button id="download-pdf"><b>Download as PDF</b></button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
